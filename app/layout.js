@@ -36,7 +36,18 @@ export default function RootLayout({ children }) {
               aria-hidden="true"
             />
           </a>
-          <div>
+          <button
+            className="nav-toggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="primary-navigation"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </button>
+          <div className="nav-links" id="primary-navigation">
             <a href="/">Home</a>
             <a href="/faq">FAQ</a>
             <a href="/contact">Contact</a>

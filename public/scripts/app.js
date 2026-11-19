@@ -425,6 +425,17 @@ function updateLandingHeader(){var landing=document.body.classList.contains("lan
 function route(){if(!app)return;var legacy=(location.hash||"").slice(1);if(ROUTES[legacy])history.replaceState({},"",(legacy=="home"?"/":"/"+legacy)+location.search);var name=location.pathname.split("/").filter(Boolean).pop()||"home";window.scrollTo(0,0);document.body.classList.toggle("landing-page",name=="home");updateLandingHeader();(ROUTES[name]||home)();startCd();reveal()}
 function navigateTo(path,replace){history[replace?"replaceState":"pushState"]({},"",path);route()}
 function handleInternalNavigation(event){if(event.defaultPrevented||event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;var link=event.target.closest&&event.target.closest("a[href]");if(!link||link.target&&link.target!="_self"||link.hasAttribute("download"))return;var url=new URL(link.href,location.href);if(url.origin!==location.origin)return;var pathname=url.pathname;if(url.hash){var legacy=url.hash.slice(1);if(!ROUTES[legacy])return;pathname=legacy=="home"?"/":"/"+legacy}var name=pathname.split("/").filter(Boolean).pop()||"home";if(!ROUTES[name])return;event.preventDefault();var next=pathname+url.search;if(next!=location.pathname+location.search){history.pushState({},"",next);route()}}
+function setupMobileNavigation(){
+var nav=document.querySelector("nav"),toggle=nav&&nav.querySelector(".nav-toggle");
+if(!toggle)return;
+function setOpen(open){nav.classList.toggle("nav-open",open);toggle.setAttribute("aria-expanded",String(open));toggle.setAttribute("aria-label",open?"Close navigation menu":"Open navigation menu")}
+toggle.addEventListener("click",function(){setOpen(toggle.getAttribute("aria-expanded")!=="true")});
+nav.addEventListener("click",function(event){if(event.target.closest&&event.target.closest("a"))setOpen(false)});
+document.addEventListener("click",function(event){if(!nav.contains(event.target))setOpen(false)});
+document.addEventListener("keydown",function(event){if(event.key==="Escape"&&nav.classList.contains("nav-open")){setOpen(false);toggle.focus()}});
+window.addEventListener("resize",function(){if(window.innerWidth>620)setOpen(false)});
+}
+setupMobileNavigation();
 if(app)document.addEventListener("click",handleInternalNavigation);
 window.addEventListener("scroll",updateLandingHeader,{passive:true});
 window.addEventListener("popstate",route);route();

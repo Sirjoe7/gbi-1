@@ -7,8 +7,20 @@
 3. Enable Google under **Authentication → Providers**. Create a Google OAuth client and set its authorized redirect URI to `https://<project-ref>.supabase.co/auth/v1/callback`. Enter the Google client ID and secret in Supabase's Google provider settings. See the [Supabase Google sign-in guide](https://supabase.com/docs/guides/auth/social-login/auth-google).
 4. Applicant sign-in and account creation use Google only. Google provides the applicant's name and verified email; the application form collects their phone number. Staff sign-in remains email/password, so keep the email provider enabled for staff accounts.
 5. Custom SMTP is not required for Google sign-in. Configure it if you need Supabase Auth emails such as password recovery or legacy email-confirmation flows; Supabase's default mailer is testing-only and may restrict delivery to project team addresses. See the [Supabase SMTP guide](https://supabase.com/docs/guides/auth/auth-smtp).
-6. Copy `.env.example` to `.env.local` and set the project URL, anon key, and service-role key. Keep the service-role key server-only; never prefix it with `NEXT_PUBLIC_`.
+6. Copy `.env.example` to `.env.local` and set the project URL, public anon/publishable key, and service-role key. Keep the service-role key server-only; never prefix it with `NEXT_PUBLIC_`.
 7. The private `application-documents` storage bucket is created by the schema. CV uploads are handled server-side and are not publicly readable.
+
+### Vercel deployment
+
+In the Vercel project, open **Settings → Environment Variables** and add:
+
+- `SUPABASE_URL` (or `NEXT_PUBLIC_SUPABASE_URL`)
+- `NEXT_PUBLIC_SUPABASE_ANON_KEY` (or `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`)
+- `SUPABASE_SERVICE_ROLE_KEY` — server-only; never expose this as a `NEXT_PUBLIC_` variable
+- `PAYSTACK_SECRET_KEY` for payment checkout
+- `NEXT_PUBLIC_SITE_URL` set to the deployed app's canonical HTTPS URL
+
+Apply the variables to the relevant Production, Preview, and Development environments. Redeploy after saving; environment-variable changes do not affect existing deployments.
 
 ## Paystack
 
