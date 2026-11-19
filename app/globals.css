@@ -93,7 +93,7 @@ nav .nb{margin-left:18px;background:var(--lamp);color:#1b1405;padding:8px 16px;b
 .steps i{height:8px}
 .tl li.now:before{box-shadow:0 0 0 5px rgba(242,177,52,.3)}
 @media(max-width:620px){.cd div{min-width:0;flex:1;padding:10px 6px}.hero .btn.ghost{margin:10px 0 0}nav .nb{margin-left:8px}}
-:root{--font:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text",Inter,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+:root{--font:"Inter Variable",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
 body,input,select,textarea,.btn,.pill,summary{font-family:var(--font)}
 h1,h2,h3,nav b,.ref,.cd b{font-family:var(--font);letter-spacing:-.02em}
 body{font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased}
@@ -492,7 +492,7 @@ body.landing-page .landing-fee-action:hover{background:var(--panel)}
 #app .adm .admin-payment-status.pending{background:var(--panel);border-color:var(--line);color:var(--mute)}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
-:root{--heading-font:Inter,"Segoe UI",system-ui,-apple-system,BlinkMacSystemFont,sans-serif}
+:root{--heading-font:"Manrope Variable","Inter Variable",system-ui,-apple-system,BlinkMacSystemFont,sans-serif}
 h1,h2,h3,h4,h5,h6{font-family:var(--heading-font);font-weight:650;line-height:1.15;letter-spacing:-.02em}
 #app h1,#app h2,#app h3,#app h4,#app h5,#app h6{font-family:var(--heading-font)}
 #app h1{font-weight:700;letter-spacing:-.035em}

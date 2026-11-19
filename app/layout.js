@@ -1,5 +1,7 @@
 import "./globals.css";
 import "flag-icons/css/flag-icons.min.css";
+import "@fontsource-variable/inter/wght.css";
+import "@fontsource-variable/manrope/wght.css";
 import Script from "next/script";
 
 export const metadata = {
