@@ -30,7 +30,7 @@ function applicationToken(request) {
 
 function validateDetails(details) {
   const required = [
-    "name", "email", "dob", "phone", "country", "institution",
+    "first_name", "last_name", "name", "email", "dob", "phone", "country", "institution",
     "education", "status", "course", "gradyear", "employment",
     "skills", "m1", "m2", "m3", "m5",
   ];
@@ -189,8 +189,14 @@ export async function POST(request) {
     } else {
       delete details.role;
     }
-    details.first_name = metadata.first_name || names[0] || "";
-    details.last_name = metadata.last_name || names.slice(1).join(" ");
+    details.first_name =
+      typeof details.first_name === "string"
+        ? details.first_name.trim()
+        : metadata.first_name || names[0] || "";
+    details.last_name =
+      typeof details.last_name === "string"
+        ? details.last_name.trim()
+        : metadata.last_name || names.slice(1).join(" ");
     details.name = [details.first_name, details.last_name].filter(Boolean).join(" ");
     details.email = (auth.user.email || "").trim().toLowerCase();
     details.phone = typeof details.phone === "string" ? details.phone.trim() : metadata.phone || "";
