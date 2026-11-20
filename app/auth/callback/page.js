@@ -24,7 +24,7 @@ export default function AuthCallback() {
         window.history.replaceState({}, document.title, window.location.pathname);
         sessionStorage.removeItem("gbi-oauth-code-verifier");
         sessionStorage.removeItem("gbi-oauth-return-to");
-        setMessage(value("error_description") || "Google sign-in failed. Check the Supabase provider and redirect URL settings.");
+        setMessage(value("error_description") || "Google sign-in failed.");
         return;
       }
 
