@@ -45,7 +45,7 @@ function validateDetails(details) {
   }
 
   const birth = new Date(`${details.dob}T00:00:00Z`);
-  const eventDate = new Date("2027-04-03T00:00:00Z");
+  const eventDate = new Date("2027-07-19T00:00:00Z");
   if (Number.isNaN(birth.getTime()) || birth.toISOString().slice(0, 10) !== details.dob) {
     return "Enter a valid date of birth.";
   }
@@ -57,7 +57,7 @@ function validateDetails(details) {
   ) {
     age -= 1;
   }
-  if (age < 18 || age > 40) return "Applicants must be aged 18 to 40 by 3 April 2027.";
+  if (age < 18 || age > 40) return "Applicants must be aged 18 to 40 on 19 July 2027.";
   if (details.m1.trim().length < 40) return "Expand your response to the first motivation question.";
 
   return null;

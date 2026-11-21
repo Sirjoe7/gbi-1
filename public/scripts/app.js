@@ -169,12 +169,12 @@ function bridge() {
 
 var HERO = "/assets/images/amsterdam-hero.jpg";
 function home() {
-  app.innerHTML = `<section class="hero" style="--img:url(${HERO})"><div class="in hg"><div class="eye">Cohort 1 · 2027</div><h1>Connecting Emerging Talent with Global Opportunity.</h1><p>The Great Bridges Initiative connects continuing students and recent graduates with executives, founders and experts in AI, business, engineering and digital media. Cohort 1 is our first intake. Selected participants travel, stay and eat at no cost.</p><p class="when">Starts 3 April 2027 · 7 days · Amsterdam, Netherlands</p><div class="cd" id="cd" aria-label="Countdown to the event"></div><a class="btn" href="/apply">Apply now</a><a class="btn ghost" href="/faq">Read the FAQ</a></div></section>
-<dl class="facts2"><div><dt>Funding</dt><dd>Fully funded for selected applicants</dd></div><div><dt>Dates</dt><dd>From 3 April 2027, 7 days</dd></div><div><dt>Location</dt><dd>Amsterdam, Netherlands</dd></div><div><dt>Eligibility</dt><dd>Students and graduates aged 18 to 40</dd></div><div><dt>Registration fee</dt><dd>$20 USD, non-refundable</dd></div></dl>
+  app.innerHTML = `<section class="hero" style="--img:url(${HERO})"><div class="in hg"><div class="eye">Cohort 1 · 2027</div><h1>Connecting Emerging Talent with Global Opportunity.</h1><p>The Great Bridges Initiative connects continuing students and recent graduates with executives, founders and experts in AI, business, engineering and digital media. Cohort 1 is our first intake. Selected participants travel, stay and eat at no cost.</p><p class="when">Application deadline: 3 April 2027</p><p class="when">Conference begins 19 July 2027 · 7 days · Amsterdam, Netherlands</p><p>After applications close, shortlisted candidates will have time to obtain passports and visas before the conference.</p><div class="cd" id="cd" aria-label="Countdown to the application deadline"></div><a class="btn" href="/apply">Apply now</a><a class="btn ghost" href="/faq">Read the FAQ</a></div></section>
+<dl class="facts2"><div><dt>Application deadline</dt><dd>3 April 2027</dd></div><div><dt>Conference</dt><dd>From 19 July 2027, 7 days</dd></div><div><dt>Location</dt><dd>Amsterdam, Netherlands</dd></div><div><dt>Eligibility</dt><dd>Students and graduates aged 18 to 40</dd></div><div><dt>Registration fee</dt><dd>$20 USD, non-refundable</dd></div></dl>
 <div class="wrap wide">
 <section class="sec two rv"><div><p class="eyebrow">01 · About</p><h2>A bridge between education and professional life</h2></div><div><p>The Great Bridges Initiative (GBI) is a professional training and networking programme. It brings continuing students and recent graduates together with experienced professionals, industry experts, business owners and company executives.</p><p>Participants gain practical insight into their fields and build relationships that can lead to internships, employment, mentorship and collaboration.</p><p class="mu"><b>Fields represented:</b> AI and technology · Business and entrepreneurship · Engineering · Content creation and digital media</p></div></section>
 <section class="sec rv"><p class="eyebrow">02 · What is provided</p><h2>Support provided to selected participants</h2><div class="rows"><div><h3>Travel</h3><p>Return travel to Amsterdam, airport transfers and local transport.</p></div><div><h3>Accommodation</h3><p>High-standard lodging for the whole programme.</p></div><div><h3>Meals</h3><p>Daily meals, refreshments and networking dinners.</p></div><div><h3>Programme</h3><p>Training sessions, workshops, mentorship and a certificate of participation.</p></div><div><h3>Guided tour of Amsterdam</h3><p>A guided tour of the city for every successful candidate.</p></div><div><h3>Visa support</h3><p>Full visa support, including an official visa support letter.</p></div><div><h3>Global speakers</h3><p>The chance to meet and learn from speakers and experts from many countries.</p></div></div></section>
-<section class="sec rv"><p class="eyebrow">03 · Eligibility</p><h2>Who can apply</h2><div class="rows"><div><h3>Status</h3><p>Continuing students and recent graduates.</p></div><div><h3>Education pathway</h3><p>Applicants from all fields of study and education pathways are welcome.</p></div><div><h3>Age</h3><p>Applicants must be aged 18 to 40 on the first day of the conference, 3 April 2027.</p></div></div></section>
+<section class="sec rv"><p class="eyebrow">03 · Eligibility</p><h2>Who can apply</h2><div class="rows"><div><h3>Status</h3><p>Continuing students and recent graduates.</p></div><div><h3>Education pathway</h3><p>Applicants from all fields of study and education pathways are welcome.</p></div><div><h3>Age</h3><p>Applicants must be aged 18 to 40 on the first day of the conference, 19 July 2027.</p></div></div></section>
 <section class="sec rv"><p class="eyebrow">04 · How to apply</p><h2>Four steps</h2><ol class="steps5"><li><b>1</b><h3>Sign in</h3><p>Create or access your account with Google.</p></li><li><b>2</b><h3>Apply</h3><p>Complete your about, professional and statement sections from your dashboard.</p></li><li><b>3</b><h3>Review</h3><p>Check your details before submitting.</p></li><li><b>4</b><h3>Pay</h3><p>Pay the one-time $20 registration fee through Paystack to submit your application.</p></li></ol></section>
 <section class="sec rv"><p class="eyebrow">05 · Registration fee</p><h2>One-time fee, merit-based selection</h2><p class="lead2">The registration fee of $20 USD is a one-time, non-refundable contribution to the administrative and logistical costs of organising the programme. It also helps ensure that applications come from candidates who are genuinely committed to taking part.</p><p class="lead2">Payment does not guarantee selection. All applications are assessed on merit. The fee is separate from the sponsorship, which covers the costs of selected participants.</p></section>
 </div>
@@ -201,7 +201,22 @@ function terms() {
   legal(
     "Terms and conditions",
     "18 November 2026",
-    `<h2>1. Eligibility</h2><p>The programme is open to continuing students and recent graduates aged 18 to 40 on 3 April 2027, the first day of the conference. We may ask for evidence of your age and status.</p><h2>2. Application and registration fee</h2><p>Every applicant pays a one-time registration fee of $20 USD, processed by Paystack. The fee is non-refundable, whether or not you are selected. Only applications with confirmed payment enter the selection process. Payment does not guarantee selection.</p><h2>3. Accuracy of information</h2><p>You confirm that the information you provide is accurate. Applications cannot be edited after submission. Inaccurate or misleading information may lead to disqualification.</p><h2>4. Selection</h2><p>Selection is based on merit, assessed by GBI reviewers. Applicants can check the status of their applications by logging into their dashboards regularly.</p><h2>5. Sponsorship</h2><p>Selected participants receive the approved sponsorship package: return travel, accommodation, meals, local transport, programme access, a guided tour of Amsterdam, and visa support including an official visa support letter. Visa approval remains the decision of the relevant authorities. Sponsorship is available only to officially accepted applicants who follow the travel and participation instructions provided by the organisers.</p><h2>6. Conduct and certificates</h2><p>Participants are expected to attend the programme and behave respectfully towards speakers, staff and other participants. Certificates are issued to participants who meet the attendance requirements.</p><h2>7. Changes</h2><p>We may update programme details. If the programme is cancelled or postponed, we will notify applicants by email.</p><h2>8. Contact</h2><p>Questions about these terms: <a href="mailto:info@gbi.com">info@gbi.com</a>.</p>`,
+    `<h2>1. Eligibility</h2>
+<p>The programme is open to continuing students and recent graduates aged 18 to 40 on 19 July 2027, the first day of the conference. We may ask for evidence of your age and status.</p>
+<h2>2. Application and registration fee</h2>
+<p>Every applicant pays a one-time registration fee of $20 USD, processed by Paystack. The fee is non-refundable, whether or not you are selected. Only applications with confirmed payment enter the selection process. Applications must be complete and payment confirmed by 3 April 2027. The period after the deadline is reserved for shortlisting and gives shortlisted candidates time to obtain passports and visas before the conference begins on 19 July 2027. Payment does not guarantee selection.</p>
+<h2>3. Accuracy of information</h2>
+<p>You confirm that the information you provide is accurate. Applications cannot be edited after submission. Inaccurate or misleading information may lead to disqualification.</p>
+<h2>4. Selection</h2>
+<p>Selection is based on merit, assessed by GBI reviewers. Applicants can check the status of their applications by logging into their dashboards regularly.</p>
+<h2>5. Sponsorship</h2>
+<p>Selected participants receive the approved sponsorship package: return travel, accommodation, meals, local transport, programme access, a guided tour of Amsterdam, and visa support including an official visa support letter. Visa approval remains the decision of the relevant authorities. Sponsorship is available only to officially accepted applicants who follow the travel and participation instructions provided by the organisers.</p>
+<h2>6. Conduct and certificates</h2>
+<p>Participants are expected to attend the programme and behave respectfully towards speakers, staff and other participants. Certificates are issued to participants who meet the attendance requirements.</p>
+<h2>7. Changes</h2>
+<p>We may update programme details. If the programme is cancelled or postponed, we will notify applicants by email.</p>
+<h2>8. Contact</h2>
+<p>Questions about these terms: <a href="mailto:info@gbi.com">info@gbi.com</a>.</p>`,
   );
 }
 
@@ -240,9 +255,10 @@ function home() {
       <span class="badge">Cohort 1</span>
       <span class="badge">Fully funded for selected applicants</span>
       <h1>Connecting Emerging Talent with Global Opportunity.</h1>
-      <p>The Great Bridges Initiative connects continuing students and recent graduates with executives, founders and experts in AI, business, engineering and digital media. Cohort 1 is our first intake. Selected participants travel, stay and eat at no cost.</p>
-      <p class="when">Starts 3 April 2027 · 7 days · Amsterdam, Netherlands</p>
-      <div class="cd" id="cd" aria-label="Countdown to the event"></div>
+      <p>The Great Bridges Initiative connects continuing students and recent graduates with executives, founders and experts in AI, business, engineering and other major fields. Cohort 1 is our first intake of 2027. Selected participants travel, stay and eat at no cost.</p>
+      <p class="when">Application deadline: 3 April 2027</p>
+      <p class="when">Conference begins 19 July 2027 · 7 days · Amsterdam, Netherlands</p>
+      <div class="cd" id="cd" aria-label="Countdown to the application deadline"></div>
       <a class="btn" href="/apply">Apply now</a>
       <a class="btn ghost" href="/faq">Read the FAQ</a>
     </div>
@@ -289,7 +305,7 @@ function home() {
     <div class="grid landing-grid landing-eligibility-grid">
       <div><span class="landing-card-number" aria-hidden="true">01</span><h3>Students and graduates</h3><p>Continuing students and recent graduates.</p></div>
       <div><span class="landing-card-number" aria-hidden="true">02</span><h3>All education pathways</h3><p>Students and recent graduates from every field of study and education pathway are welcome.</p></div>
-      <div><span class="landing-card-number" aria-hidden="true">03</span><h3>Aged 18 to 40</h3><p>You must be within this age range on the first day of the conference, 3 April 2027.</p></div>
+      <div><span class="landing-card-number" aria-hidden="true">03</span><h3>Aged 18 to 40</h3><p>You must be within this age range on the first day of the conference, 19 July 2027.</p></div>
     </div>
   </section>
   <section class="landing-section landing-process" aria-labelledby="landing-process-title">
@@ -303,6 +319,7 @@ function home() {
       <div><span class="num">3</span><h3>Review</h3><p>Review your application before submitting.</p></div>
       <div><span class="num">4</span><h3>Pay</h3><p>Pay the $20 registration fee to submit your application for review.</p></div>
     </div>
+    <p>Shortlisting follows the 3 April 2027 deadline, leaving shortlisted candidates time to obtain passports and visas before the conference begins on 19 July.</p>
   </section>
   <aside class="landing-fee">
     <div>
@@ -387,12 +404,13 @@ function faq() {
     [
       [
         "Who can apply?",
-        "Continuing students and recent graduates from any field of study or education pathway, aged 18 to 40 on 3 April 2027.",
+        "Continuing students and recent graduates from any field of study or education pathway, aged 18 to 40 on 19 July 2027.",
       ],
       [
-        "Is this the first edition?",
-        "Yes. This is Cohort 1, the first intake of the Great Bridges Initiative.",
+        "When is the application deadline and conference?",
+        "Applications close on 3 April 2027. The conference begins on 19 July 2027 and runs for 7 days. The period between is reserved for shortlisting and gives shortlisted candidates time to obtain passports and visas.",
       ],
+      
       [
         "Do you help with visas?",
         "Yes. Successful candidates receive full visa support, including an official visa support letter.",
@@ -1496,7 +1514,7 @@ function dash() {
               : '<li class="now pending">Awaiting payment</li>') +
             '<li class="' +
             (a.status === "under_review" ? "now" : "") +
-            '">Under review</li><li>Shortlisted</li><li>Decision</li></ul></div><div class="card" style="margin-top:18px"><h3>Event</h3><p>Cohort 1 · 3 April 2027 · 7 days · Amsterdam, Netherlands</p><p>Payment does not guarantee selection.</p></div><div class="card" style="margin-top:18px"><h3>Your application</h3><dl><dt>First name</dt><dd>' +
+            '">Under review</li><li>Shortlisted</li><li>Decision</li></ul></div><div class="card" style="margin-top:18px"><h3>Event</h3><p>Cohort 1 · 19 July 2027 · 7 days · Amsterdam, Netherlands</p><p>Payment does not guarantee selection.</p></div><div class="card" style="margin-top:18px"><h3>Your application</h3><dl><dt>First name</dt><dd>' +
             esc(d.first_name || S.profile.first_name || "–") +
             "</dd><dt>Last name</dt><dd>" +
             esc(d.last_name || S.profile.last_name || "–") +
