@@ -96,7 +96,6 @@ export default function RootLayout({ children }) {
           </div>
           <div className="ftb">
             © 2026 Great Bridges Initiative. All rights reserved.{" "}
-            <a href="/admin">Staff sign in</a>
           </div>
         </footer>
         <Script src="/scripts/app.js" strategy="afterInteractive" />
